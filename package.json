@@ -1,0 +1,34 @@
+{
+  "name": "com.karlbanan.editorlayout.extras",
+  "version": "1.0.0",
+  "displayName": "Editor Layout Extras",
+  "description": "Optional ready to use inspector fields and helpers for Editor Layout",
+  "unity": "6000.0",
+  "license": "MIT",
+  "documentationUrl": "https://github.com/ClearKitten/com.karlbanan.editorlayout.extras#readme",
+  "changelogUrl": "https://github.com/ClearKitten/com.karlbanan.editorlayout.extras/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/ClearKitten/com.karlbanan.editorlayout.extras/blob/main/LICENSE.md",
+  "keywords": [
+    "editor",
+    "inspector",
+    "fields",
+    "layout",
+    "unity-editor",
+    "custom-inspector"
+  ],
+  "samples": [
+    {
+      "displayName": "Extras Usage Example",
+      "description": "Contains a demo scene with a MonoBehaviour and custom inspector showing all ready to use Extra fields.",
+      "path": "Samples~/ExtrasUsage"
+    }
+  ],
+  "hideInEditor": false,
+  "dependencies": {
+    "com.karlbanan.editorlayout": "1.0.0"
+  },
+  "author": {
+    "name": "Karl Pettersson",
+    "url": "https://github.com/ClearKitten"
+  }
+}

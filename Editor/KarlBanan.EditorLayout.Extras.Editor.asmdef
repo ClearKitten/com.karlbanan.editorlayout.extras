@@ -1,0 +1,18 @@
+{
+  "name": "KarlBanan.EditorLayout.Extras.Editor",
+  "rootNamespace": "KarlBanan.EditorLayout",
+  "references": [
+    "KarlBanan.EditorLayout.Editor"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
