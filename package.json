@@ -24,9 +24,7 @@
     }
   ],
   "hideInEditor": false,
-  "dependencies": {
-    "com.karlbanan.editorlayout": "1.0.0"
-  },
+  "dependencies": {},
   "author": {
     "name": "Karl Pettersson",
     "url": "https://github.com/ClearKitten"

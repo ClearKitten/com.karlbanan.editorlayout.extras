@@ -53,10 +53,12 @@ https://github.com/ClearKitten/com.karlbanan.editorlayout.extras.git#v1.0.0
 
 ## Dependency
 
-This pacakges depends on the core package:
+This package depends on `com.karlbanan.editorlayout`. 
+
+When installing from Git, install the core package first:
 
 ```txt
-com.karlbanan.editorlayout
+https://github.com/ClearKitten/com.karlbanan.editorlayout.git
 ```
 
 ## Requirements
