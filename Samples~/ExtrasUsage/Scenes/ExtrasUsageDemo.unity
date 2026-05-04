@@ -435,6 +435,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1604696404}
+  - component: {fileID: 1604696405}
   m_Layer: 0
   m_Name: ExtrasUsageDemo
   m_TagString: Untagged
@@ -457,6 +458,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1604696405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604696403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3347652fad27b6144bb4a6079d77f0d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleValue: 1
+  intValue: 5
+  floatValue: 0.5
+  doubleValue: 10.5
+  textValue: Hello Editor Layout!
+  textAreaValue: This is a multiline text area.
+  enumValue: 0
+  intSliderValue: 25
+  floatSliderValue: 0.75
+  colorValue: {r: 0.25, g: 0.65, b: 1, a: 1}
+  objectValue: {fileID: 0}
+  vector2Value: {x: 1, y: 2}
+  vector2IntValue: {x: 1, y: 2}
+  vector3Value: {x: 1, y: 2, z: 3}
+  vector3IntValue: {x: 1, y: 2, z: 3}
+  vector2SliderValue: {x: 0.25, y: 0.75}
+  vector2IntSliderValue: {x: 25, y: 75}
+  vector3SliderValue: {x: 0.25, y: 0.5, z: 0.75}
+  vector3IntSliderValue: {x: 25, y: 50, z: 75}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
