@@ -9,8 +9,8 @@ namespace KarlBanan.EditorLayout
     /// </summary>
     public class Vector3SliderField : VectorSliderField<Vector3>
     {
-        private readonly float minValue;
-        private readonly float maxValue;
+        private readonly Vector3 minValue;
+        private readonly Vector3 maxValue;
 
 
         /// <summary>
@@ -32,13 +32,14 @@ namespace KarlBanan.EditorLayout
             float maxValue,
             Action<Vector3> setValue,
             VectorSliderLayout sliderLayout = VectorSliderLayout.Horizontal,
+            float spacing = 4f,
             Func<bool> canDisplay = null,
             ElementLayout? elementLayout = null,
             LabelSettings? labelSettings = null)
-            : base(content, value, setValue, new[] { "X", "Y", "Z" }, sliderLayout, canDisplay, elementLayout, labelSettings)
+            : base(content, value, setValue, new[] { "X", "Y", "Z" }, sliderLayout, spacing, canDisplay, elementLayout, labelSettings)
         {
-            this.minValue = minValue;
-            this.maxValue = maxValue;
+            this.minValue = new Vector3(minValue, minValue, minValue);
+            this.maxValue = new Vector3(maxValue, maxValue, maxValue);
         }
 
 
@@ -61,10 +62,71 @@ namespace KarlBanan.EditorLayout
             float maxValue,
             Action<Vector3> setValue,
             VectorSliderLayout sliderLayout = VectorSliderLayout.Horizontal,
+            float spacing = 4f,
             Func<bool> canDisplay = null,
             ElementLayout? elementLayout = null,
             LabelSettings? labelSettings = null)
-            : base(new GUIContent(label), value, setValue, new[] { "X", "Y", "Z" }, sliderLayout, canDisplay, elementLayout, labelSettings)
+            : base(new GUIContent(label), value, setValue, new[] { "X", "Y", "Z" }, sliderLayout, spacing, canDisplay, elementLayout, labelSettings)
+        {
+            this.minValue = new Vector3(minValue, minValue, minValue);
+            this.maxValue = new Vector3(maxValue, maxValue, maxValue);
+        }
+
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Vector3SliderField"/> class.
+        /// </summary>
+        /// <param name="content">The content used as the field label.</param>
+        /// <param name="value">The current field value.</param>
+        /// <param name="minValue">The minimum slider value for each component.</param>
+        /// <param name="maxValue">The maximum slider value for each component.</param>
+        /// <param name="setValue">The callback used to assign the changed value.</param>
+        /// <param name="sliderLayout">The layout direction used for the component sliders.</param>
+        /// <param name="canDisplay">An optional condition that determines whether the field should be drawn.</param>
+        /// <param name="elementLayout">Optional layout settings for the field.</param>
+        /// <param name="labelSettings">Optional label settings for the field.</param>
+        public Vector3SliderField(
+            GUIContent content,
+            Vector3 value,
+            Vector3 minValue,
+            Vector3 maxValue,
+            Action<Vector3> setValue,
+            VectorSliderLayout sliderLayout = VectorSliderLayout.Horizontal,
+            float spacing = 4f,
+            Func<bool> canDisplay = null,
+            ElementLayout? elementLayout = null,
+            LabelSettings? labelSettings = null)
+            : base(content, value, setValue, new[] { "X", "Y", "Z" }, sliderLayout, spacing, canDisplay, elementLayout, labelSettings)
+        {
+            this.minValue = minValue;
+            this.maxValue = maxValue;
+        }
+
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Vector3SliderField"/> class.
+        /// </summary>
+        /// <param name="label">The content used as the field label.</param>
+        /// <param name="value">The current field value.</param>
+        /// <param name="minValue">The minimum slider value for each component.</param>
+        /// <param name="maxValue">The maximum slider value for each component.</param>
+        /// <param name="setValue">The callback used to assign the changed value.</param>
+        /// <param name="sliderLayout">The layout direction used for the component sliders.</param>
+        /// <param name="canDisplay">An optional condition that determines whether the field should be drawn.</param>
+        /// <param name="elementLayout">Optional layout settings for the field.</param>
+        /// <param name="labelSettings">Optional label settings for the field.</param>
+        public Vector3SliderField(
+            string label,
+            Vector3 value,
+            Vector3 minValue,
+            Vector3 maxValue,
+            Action<Vector3> setValue,
+            VectorSliderLayout sliderLayout = VectorSliderLayout.Horizontal,
+            float spacing = 4f,
+            Func<bool> canDisplay = null,
+            ElementLayout? elementLayout = null,
+            LabelSettings? labelSettings = null)
+            : base(new GUIContent(label), value, setValue, new[] { "X", "Y", "Z" }, sliderLayout, spacing, canDisplay, elementLayout, labelSettings)
         {
             this.minValue = minValue;
             this.maxValue = maxValue;
@@ -77,13 +139,13 @@ namespace KarlBanan.EditorLayout
             switch (index)
             {
                 case 0:
-                    currentValue.x = EditorGUI.Slider(sliderRect, GUIContent.none, currentValue.x, minValue, maxValue);
+                    currentValue.x = EditorGUI.Slider(sliderRect, GUIContent.none, currentValue.x, minValue.x, maxValue.x);
                     break;
                 case 1:
-                    currentValue.y = EditorGUI.Slider(sliderRect, GUIContent.none, currentValue.y, minValue, maxValue);
+                    currentValue.y = EditorGUI.Slider(sliderRect, GUIContent.none, currentValue.y, minValue.y, maxValue.y);
                     break;
                 case 2:
-                    currentValue.z = EditorGUI.Slider(sliderRect, GUIContent.none, currentValue.z, minValue, maxValue);
+                    currentValue.z = EditorGUI.Slider(sliderRect, GUIContent.none, currentValue.z, minValue.z, maxValue.z);
                     break;
             }
             return currentValue;

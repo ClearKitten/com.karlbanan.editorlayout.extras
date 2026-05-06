@@ -1,6 +1,6 @@
 {
   "name": "com.karlbanan.editorlayout.extras",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "Editor Layout Extras",
   "description": "Optional ready to use inspector fields and helpers for Editor Layout",
   "unity": "6000.0",

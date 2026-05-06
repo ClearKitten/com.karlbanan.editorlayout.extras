@@ -45,6 +45,7 @@ namespace KarlBanan.EditorLayout
             Action<T> setValue,
             string[] componentLabels,
             VectorSliderLayout sliderLayout = VectorSliderLayout.Horizontal,
+            float spacing = 4f,
             Func<bool> canDisplay = null,
             ElementLayout? elementLayout = null,
             LabelSettings? labelSettings = null)
@@ -53,7 +54,7 @@ namespace KarlBanan.EditorLayout
             this.componentLabels = componentLabels;
             this.sliderLayout = sliderLayout;
 
-            spacing = 4f;
+            this.spacing = spacing;
             componentLabelWidth = 14f;
         }
 

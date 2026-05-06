@@ -2,6 +2,14 @@
 
 All notable changes to this package will be documented in this file.
 
+## [1.0.1] - 2026-05-06
+
+- Updated `Vector2IntSliderField` to handle min and max values from vectors aswell
+- Updated `Vector2SliderField` to handle min and max values from vectors aswell
+- Updated `Vector3IntSliderField` to handle min and max values from vectors aswell 
+- Updated `Vector3SliderField` to handle min and max values from vectors aswell 
+- Updated `VectorSliderField` to take in optional spacing input between the vector components.
+
 ## [1.0.0] - 2026-05-04
 
 ### Added
